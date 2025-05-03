@@ -1,265 +1,287 @@
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-  }
-  
-  header {
-    background-color: #fff;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  #logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 0.95rem;
-    cursor: pointer;
-  }
-  
-  nav a:hover,
-  #logoutLink:hover {
-    color: #1565c0;
-  }
-  
-  .main-visual {
-    background-color: #daf0f2;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .visual-content {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .visual-content h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .visual-content p {
-    margin: 0 0 20px 0;
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.4;
-  }
-  
-  .visual-content button {
-    background-color: #ffef92;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .visual-content button:hover {
-    background-color: #ffdd55;
-  }
-  
-  .scroll-down {
-    cursor: pointer;
-  }
-  
-  .scroll-down img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 40px 20px;
-  }
-  
-  .mission-card {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .mission-card .placeholder img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 20px;
-  }
-  
-  .mission-content {
-    flex-grow: 1;
-  }
-  
-  .mission-content h2 {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-  
-  .mission-content p {
-    margin: 0 0 10px 0;
-    color: #666;
-  }
-  
-  .mission-card button {
-    background-color: #eee;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .mission-card button:hover {
-    background-color: #ccc;
-  }
-  
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .card .placeholder img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
-  }
-  
-  .card h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.1rem;
-    color: #333;
-  }
-  
-  .card p {
-    margin: 0;
-    color: #666;
-  }
-  
-  .scroll-up {
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .scroll-up img {
-    width: 30px;
-    cursor: pointer;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    border-radius: 5px;
-    position: relative;
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-  }
-  
-  .close:hover {
-    color: #000;
-  }
-  
-  #loginModal label {
-    display: block;
-    margin: 8px 0 4px 0;
-  }
-  
-  #loginModal input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  #saveInfoBtn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #1565c0;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  #saveInfoBtn:hover {
-    background-color: #0d47a1;
-  }
-  
-  #greeting {
-    font-size: 0.9rem;
-    color: #1565c0;
-    display: none;
-  }
-  
-  #logoutLink {
-    cursor: pointer;
-    text-decoration: none;
-    color: #333;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background-color: #fff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+nav a:hover,
+#logoutLink:hover {
+  color: #1565c0;
+}
+
+.main-visual {
+  background-color: #daf0f2;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.visual-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.visual-content h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.visual-content p {
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.visual-content button {
+  background-color: #ffef92;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.visual-content button:hover {
+  background-color: #ffdd55;
+}
+
+.scroll-down {
+  cursor: pointer;
+}
+
+.scroll-down img {
+  width: 40px;
+  height: 40px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mission-card {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+.mission-card .placeholder img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.mission-content {
+  flex-grow: 1;
+}
+
+.mission-content h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.mission-content p {
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+#todoList {
+  padding-left: 5px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+#todoList li {
+  list-style-type: disc;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+
+.mission-card button {
+  background-color: #eee;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.mission-card button:hover {
+  background-color: #ccc;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card .placeholder img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card p {
+  margin: 0;
+  color: #666;
+}
+
+.scroll-up {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.scroll-up img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+ 패딩: 20 px;
+ 경계: 1 px 솔리드 #888;
+ 너비: 300 px;
+ 국경 radius: 5 px;
+ 위치: 상대적;
+}
+
+.닫기 {
+ 색상: #aaa;
+ 플로팅: 오른쪽;
+ 글꼴 크기: 28 px;
+ 글꼴 무게: 굵게;
+ 커서: 포인터;
+ 위치: 절대;
+ 상위: 10개의 px;
+ 오른쪽: 15 px;
+}
+
+.close: hover {
+ 색상: #000;
+}
+
+#loginModal 레이블 {
+ 디스플레이: 차단;
+ 여백: 8 px 0 4 px 0;
+}
+
+#loginModal 입력 {
+ 너비: 100%;
+ 패딩: 8 px;
+ 마진 바닥: 10 px;
+ 박스 sizing: 테두리 박스;
+ 경계: 1 px 고체 #cc;
+ 국경 radius: 4 px;
+}
+
+#saveInfoBtn {
+ 너비: 100%;
+ 패딩: 10 px;
+ 경계: 없음;
+ 국경 radius: 4 px;
+ 배경색: #1565c0;
+ 색상: #fff;
+ 글꼴 무게: 굵게;
+ 커서: 포인터;
+}
+
+#saveInfoBtn:호버 {
+ 배경색: #0d47a1;
+}
+
+#인사 {
+ 글꼴 크기: 0.9rem;
+ color: #1565c0;
+ 표시: 없음;
+}
+
+#로그아웃링크 {
+ 커서: 포인터;
+ 텍스트 장식: 없음;
+ 색상: #333;
+}
+
